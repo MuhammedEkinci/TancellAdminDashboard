@@ -2,8 +2,17 @@
     margin-left: 20px;
 }
 
+.navlink-link{
+    color: black !important;
+    transition: all ease .3s;
+}
+
+.navlink-link:hover{
+    color: #0d6efd !important;
+}
+
 @media (min-width: 993px){
     .navbar-brand{
-        margin-left: 10px !important;
+        margin-left: 30px !important;
     }
 }

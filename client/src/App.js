@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
 import SideNavPage from './components/SideNavPage';
-import HomeDashboard from './pages/Homepage';
+import HomeDashboard from './pages/HomeDashboard';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Router basename='/'>
         <SideNavPage />
         <Switch>
-          <Route exact path={["/", "/homepage"]} component={HomeDashboard} />
+          <Route exact path={["/", "/dashboard"]} component={HomeDashboard} />
         </Switch>
       </Router>
     </div>

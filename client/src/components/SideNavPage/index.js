@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { 
   MDBSideNav, 
   MDBSideNavMenu, 
@@ -39,30 +40,40 @@ export default function App() {
       >
         <MDBSideNavMenu>
           <MDBSideNavItem>
-            <MDBSideNavLink>
-              <MDBIcon far icon='smile' className='fa-fw me-3' />
-              Link 1
-            </MDBSideNavLink>
+            <NavLink className="navlink-link" to="/dashboard">
+              <MDBSideNavLink className="navlink-link">
+                <MDBIcon fas icon="home" className='fa-fw me-3'/>
+                Dashboard
+              </MDBSideNavLink>
+            </NavLink>
           </MDBSideNavItem>
           <MDBSideNavItem>
             <MDBSideNavLink icon='angle-down' shouldBeExpanded={modeCollapse1} onClick={() => setModeCollapse1(!modeCollapse1)}>
-              <MDBIcon fas icon='grin' className='fa-fw me-3' />
-              Category 1
+              <MDBIcon fas icon="tags" className='fa-fw me-3' />
+              Products
             </MDBSideNavLink>
             <MDBSideNavCollapse show={modeCollapse1}>
-              <MDBSideNavLink>Link 2</MDBSideNavLink>
-              <MDBSideNavLink>Link 3</MDBSideNavLink>
+              <NavLink className="navlink-link" to="/Add-Product"><MDBSideNavLink>Add Product</MDBSideNavLink></NavLink>
+              <NavLink className="navlink-link" to="/View-Product"><MDBSideNavLink>View Products</MDBSideNavLink></NavLink>
             </MDBSideNavCollapse>
           </MDBSideNavItem>
           <MDBSideNavItem>
             <MDBSideNavLink icon='angle-down' shouldBeExpanded={modeCollapse2} onClick={() => setModeCollapse2(!modeCollapse2)}>
-              <MDBIcon fas icon='grin' className='fa-fw me-3' />
-              Category 2
+              <MDBIcon fas icon="mobile" className='fa-fw me-3' />
+              Category
             </MDBSideNavLink>
             <MDBSideNavCollapse show={modeCollapse2}>
-              <MDBSideNavLink>Link 4</MDBSideNavLink>
-              <MDBSideNavLink>Link 5</MDBSideNavLink>
+            <NavLink className="navlink-link" to="/View-Category"><MDBSideNavLink>View Category</MDBSideNavLink></NavLink>
+            <NavLink className="navlink-link" to="/Add-Category"><MDBSideNavLink>Add Category</MDBSideNavLink></NavLink>
             </MDBSideNavCollapse>
+          </MDBSideNavItem>
+          <MDBSideNavItem>
+            <NavLink className="navlink-link" to="/Product-Type">
+              <MDBSideNavLink >
+                  <MDBIcon fas icon="layer-group"  className='fa-fw me-3'/>
+                    Product Type
+              </MDBSideNavLink>
+            </NavLink>
           </MDBSideNavItem>
         </MDBSideNavMenu>
       </MDBSideNav>

@@ -1,0 +1,9 @@
+#sidenav-btn{
+    margin-left: 20px;
+}
+
+@media (min-width: 993px){
+    .navbar-brand{
+        margin-left: 10px !important;
+    }
+}
